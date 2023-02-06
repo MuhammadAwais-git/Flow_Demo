@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.FlowsDemo.apiusingFlow.FlowApiActivity
 import com.FlowsDemo.flowsdemo.databinding.ActivityMainBinding
 import com.FlowsDemo.roomDatabase.RoomDatabaseActivity
+import com.apiCalling.FlowApiActivityPost
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -32,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.roomdb.setOnClickListener {
             startActivity(Intent(this,RoomDatabaseActivity::class.java))
+        }
+        binding.apicallpost.setOnClickListener {
+            startActivity(Intent(this,FlowApiActivityPost::class.java))
         }
     }
 

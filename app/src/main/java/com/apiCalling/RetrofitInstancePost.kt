@@ -1,4 +1,5 @@
-package com.FlowsDemo.apiusingFlow
+package com.apiCalling
+
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -6,9 +7,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-object RetrofitInstance {
-
-     val api:ApiInterface by lazy {
+object RetrofitInstancePost {
+    val api: ApiInterfacepost by lazy {
 
         val client = OkHttpClient.Builder()
         client.connectTimeout(30, TimeUnit.SECONDS)
@@ -24,6 +24,6 @@ object RetrofitInstance {
             .addConverterFactory(GsonConverterFactory.create())
             .client(client.build())
             .build()
-            .create(ApiInterface::class.java)
+            .create(ApiInterfacepost::class.java)
     }
 }

@@ -16,6 +16,9 @@
         android:theme="@style/Theme.FlowsDemo"
         tools:targetApi="31">
         <activity
+            android:name="com.apiCalling.FlowApiActivityPost"
+            android:exported="false" />
+        <activity
             android:name="com.FlowsDemo.roomDatabase.AddEventActivity"
             android:exported="false" />
         <activity
