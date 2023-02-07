@@ -19,7 +19,6 @@ class CommentViewModelPost : ViewModel() {
             ""))
 
     init {
-
         getWeatherData()
     }
 

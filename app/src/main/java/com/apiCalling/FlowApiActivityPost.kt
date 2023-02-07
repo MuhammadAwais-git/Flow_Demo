@@ -8,7 +8,6 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.FlowsDemo.flowsdemo.databinding.ActivityFlowApi2Binding
 import com.example.navigatorapp.Weather.weatherModel.WeatherListw
 import kotlinx.coroutines.launch
@@ -26,8 +25,6 @@ class FlowApiActivityPost : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this)[CommentViewModelPost::class.java]
 
-
-
         lifecycleScope.launch {
             viewModel.commentState.collect {
                 when (it.status) {
@@ -39,7 +36,7 @@ class FlowApiActivityPost : AppCompatActivity() {
 
                         it.data?.let { it ->
                             Log.d("TAG", "onCreate: dataofPost ${it}")
-                            prepareRecyclerView(it.list )
+                            prepareRecyclerView(it.list)
                         }
                     }
                     else -> {
@@ -62,7 +59,6 @@ class FlowApiActivityPost : AppCompatActivity() {
             layoutManager =
                 GridLayoutManager(applicationContext, 2)
             adapter = wAdapter
-
         }
     }
 }
